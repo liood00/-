@@ -1,0 +1,26 @@
+[
+  {
+    "name": "GitHub",
+    "description": "探索代码与有趣的项目",
+    "url": "https://github.com",
+    "icon": "</>"
+  },
+  {
+    "name": "豆瓣",
+    "description": "在书影音里遇见新世界",
+    "url": "https://www.douban.com",
+    "icon": "书"
+  },
+  {
+    "name": "少数派",
+    "description": "发现有意思的数字生活",
+    "url": "https://sspai.com",
+    "icon": "⌁"
+  },
+  {
+    "name": "Unsplash",
+    "description": "从一张照片开始漫游",
+    "url": "https://unsplash.com",
+    "icon": "□"
+  }
+]
