@@ -7,5 +7,32 @@
   "email": "ge152824@outlook.com",
   "song_title": "陈奕迅《苦瓜》",
   "song_note": "“真想不到当初我们也讨厌吃苦瓜。”有些歌，会随着时间慢慢听懂。",
-  "song_url": "https://music.apple.com/cn/search?term=%E9%99%88%E5%A5%95%E8%BF%85%20%E8%8B%A6%E7%93%9C"
+  "song_url": "https://music.apple.com/cn/search?term=%E9%99%88%E5%A5%95%E8%BF%85%20%E8%8B%A6%E7%93%9C",
+  "theme_color": "#2858df",
+  "page_width": "standard",
+  "hero_layout": "split",
+  "card_columns": "3",
+  "corner_style": "soft",
+  "layout_sections": [
+    {
+      "section": "about-note",
+      "visible": true
+    },
+    {
+      "section": "favorites",
+      "visible": true
+    },
+    {
+      "section": "stories",
+      "visible": true
+    },
+    {
+      "section": "links",
+      "visible": true
+    },
+    {
+      "section": "contact",
+      "visible": true
+    }
+  ]
 }
