@@ -1,0 +1,123 @@
+media:
+  - name: images
+    label: 图片
+    input: media/images
+    output: /media/images
+    rename: safe
+    extensions: [jpg, jpeg, png, webp, gif]
+  - name: audio
+    label: 音频
+    input: media/audio
+    output: /media/audio
+    rename: safe
+    categories: [audio]
+
+content:
+  - name: site
+    label: 首页资料和音乐
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: site_name
+        label: 网站名称
+        type: string
+        required: true
+      - name: name
+        label: 昵称
+        type: string
+        required: true
+      - name: tagline
+        label: 一句话介绍
+        type: string
+        required: true
+      - name: intro
+        label: 首页介绍
+        type: text
+      - name: avatar
+        label: 头像
+        type: image
+        options:
+          media: images
+      - name: email
+        label: 联系邮箱
+        type: string
+      - name: song_title
+        label: 推荐歌曲
+        type: string
+      - name: song_note
+        label: 听歌感受
+        type: text
+      - name: song_url
+        label: 歌曲链接
+        type: string
+
+  - name: posts
+    label: 趣事与分享
+    type: file
+    path: content/posts.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title}"
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: date
+        label: 日期
+        type: date
+      - name: category
+        label: 分类
+        type: string
+      - name: body
+        label: 正文
+        type: text
+        required: true
+      - name: image
+        label: 配图
+        type: image
+        options:
+          media: images
+      - name: audio
+        label: 音频
+        type: file
+        options:
+          media: audio
+          categories: [audio]
+
+  - name: links
+    label: 常用链接
+    type: file
+    path: content/links.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{name}"
+    fields:
+      - name: name
+        label: 名称
+        type: string
+        required: true
+      - name: description
+        label: 简介
+        type: string
+      - name: url
+        label: 网址
+        type: string
+        required: true
+      - name: icon
+        label: 图标文字
+        type: string
+
+settings:
+  content:
+    merge: direct
+  commit:
+    templates:
+      create: "content: 添加 {filename}"
+      update: "content: 更新 {filename}"
+      delete: "content: 删除 {filename}"
