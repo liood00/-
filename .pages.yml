@@ -14,7 +14,7 @@ media:
 
 content:
   - name: site
-    label: 首页资料和音乐
+    label: 首页内容与布局
     type: file
     path: content/site.json
     format: json
@@ -51,16 +51,92 @@ content:
       - name: song_url
         label: 歌曲链接
         type: string
+      - name: theme_color
+        label: 主题颜色
+        type: string
+        description: 填写十六进制颜色，例如 #2858df
+        pattern:
+          regex: "^#[0-9a-fA-F]{6}$"
+          message: "请填写类似 #2858df 的六位颜色"
+      - name: page_width
+        label: 页面宽度
+        type: select
+        options:
+          values:
+            - name: narrow
+              label: 窄版
+            - name: standard
+              label: 标准
+            - name: wide
+              label: 宽版
+      - name: hero_layout
+        label: 首页头部布局
+        type: select
+        options:
+          values:
+            - name: split
+              label: 文字和头像左右排列
+            - name: stacked
+              label: 文字和头像上下排列
+      - name: card_columns
+        label: 电脑端兴趣卡片列数
+        type: select
+        options:
+          values:
+            - name: "1"
+              label: 一列
+            - name: "2"
+              label: 两列
+            - name: "3"
+              label: 三列
+      - name: corner_style
+        label: 卡片圆角
+        type: select
+        options:
+          values:
+            - name: square
+              label: 直角
+            - name: soft
+              label: 小圆角
+            - name: round
+              label: 大圆角
+      - name: layout_sections
+        label: 首页区块顺序与显示
+        type: object
+        list:
+          min: 1
+          max: 5
+          collapsible:
+            collapsed: true
+            summary: "{section}"
+        fields:
+          - name: section
+            label: 区块
+            type: select
+            required: true
+            options:
+              values:
+                - name: about-note
+                  label: 关于这里
+                - name: favorites
+                  label: 喜欢与分享
+                - name: stories
+                  label: 最近分享
+                - name: links
+                  label: 常用链接
+                - name: contact
+                  label: 联系方式
+          - name: visible
+            label: 显示这个区块
+            type: boolean
+            default: true
 
   - name: posts
     label: 趣事与分享
     type: file
     path: content/posts.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{title}"
+    list: true
     fields:
       - name: title
         label: 标题
@@ -69,9 +145,12 @@ content:
       - name: date
         label: 日期
         type: date
+        options:
+          format: yyyy-MM-dd
       - name: category
         label: 分类
         type: string
+        description: 例如：日常、音乐、照片
       - name: body
         label: 正文
         type: text
@@ -93,10 +172,7 @@ content:
     type: file
     path: content/links.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{name}"
+    list: true
     fields:
       - name: name
         label: 名称
@@ -112,6 +188,7 @@ content:
       - name: icon
         label: 图标文字
         type: string
+        description: 例如：书、♫、◎
 
 settings:
   content:
