@@ -203,6 +203,90 @@ content:
         type: string
         description: 例如：书、♫、◎
 
+  - name: resume
+    label: 个人简历
+    type: file
+    path: content/resume.json
+    format: json
+    fields:
+      - name: name
+        label: 姓名
+        type: string
+        required: true
+      - name: title
+        label: 职业定位
+        type: string
+      - name: summary
+        label: 个人简介
+        type: text
+      - name: avatar
+        label: 头像
+        type: image
+        options:
+          media: images
+      - name: location
+        label: 所在地
+        type: string
+      - name: email
+        label: 邮箱
+        type: string
+      - name: website
+        label: 网站链接
+        type: string
+      - name: skills
+        label: 技能
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 技能名称
+            type: string
+          - name: level
+            label: 熟练度（0-100）
+            type: number
+      - name: experience
+        label: 工作/项目经历
+        type: object
+        list: true
+        fields:
+          - name: role
+            label: 职位
+            type: string
+          - name: company
+            label: 公司 / 项目
+            type: string
+          - name: period
+            label: 时间
+            type: string
+          - name: description
+            label: 描述
+            type: text
+      - name: education
+        label: 教育经历
+        type: object
+        list: true
+        fields:
+          - name: school
+            label: 学校
+            type: string
+          - name: degree
+            label: 专业 / 学位
+            type: string
+          - name: period
+            label: 时间
+            type: string
+      - name: languages
+        label: 语言能力
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 语言
+            type: string
+          - name: level
+            label: 水平
+            type: string
+
 settings:
   content:
     merge: direct

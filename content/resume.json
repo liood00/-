@@ -1,0 +1,40 @@
+{
+  "name": "天宝",
+  "title": "跨境电商 · 外贸创业者",
+  "summary": "刚起步的外贸创业者，主攻阿里巴巴国际站 B2B 批发，采用一件代发模式，目标市场聚焦东南亚、中东、拉美。正在跑通「选品 — 货源 — 上架 — 运营」全链路，积累真实运营经验。\n\n（本页为示例占位内容，可在 Pages CMS「个人简历」中修改成你的真实履历。）",
+  "avatar": "https://a-ssl.dtstatic.com/uploads/item/201511/18/20151118091533_mP5Rs.jpeg",
+  "location": "广州 / 深圳",
+  "email": "ge152824@outlook.com",
+  "website": "https://getianbao.ccwu.cc/",
+  "skills": [
+    { "name": "跨境电商选品", "level": 80 },
+    { "name": "阿里巴巴国际站运营", "level": 70 },
+    { "name": "深圳周边供应链对接", "level": 65 },
+    { "name": "数据整理与分析", "level": 60 }
+  ],
+  "experience": [
+    {
+      "role": "创始人 / 店主",
+      "company": "个人跨境电商（阿里巴巴国际站）",
+      "period": "2026 — 至今",
+      "description": "从 0 到 1 搭建国际站店铺，采用一件代发模式，聚焦东南亚、中东、拉美蓝海市场，正在跑通选品、货源、上架、运营全流程。"
+    },
+    {
+      "role": "示例职位",
+      "company": "示例公司 / 项目",
+      "period": "示例时间",
+      "description": "这是一段示例占位内容，可在 Pages CMS「个人简历」中替换成你的真实经历。"
+    }
+  ],
+  "education": [
+    {
+      "school": "示例学校",
+      "degree": "示例专业 · 学位",
+      "period": "示例时间"
+    }
+  ],
+  "languages": [
+    { "name": "中文", "level": "母语" },
+    { "name": "英语", "level": "商务读写（示例）" }
+  ]
+}
