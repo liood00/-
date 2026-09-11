@@ -1,0 +1,4 @@
+# Netlify 部署配置
+# 本站是纯静态页面（HTML + JSON + 图片），无需构建，直接发布仓库根目录
+[build]
+  publish = "."
